@@ -1,13 +1,17 @@
 import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './styles/global.css';
-import { AnimationLottie } from './Components/AnimationLottie/AnimationLottie';
-import Animation from './assets/girl.json';
+import {Login} from './Pages/Login/Login';
 
 function App() {
   return (
     <>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/login' element={<Login />}/>
+    </Routes>
+    </BrowserRouter>
     </>
-
   )
 }
 
